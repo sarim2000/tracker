@@ -1,26 +1,26 @@
-import { FileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import styled from "styled-components";
 import main from "../assets/images/main-alternative.svg";
 
-export const Route = new FileRoute('/').createRoute({
+export const Route = createFileRoute('/')({
   component: Home,
-});
+})
 
 
-type Props = {}
 
-function Home (props: Props) {
+
+function Home () {
   return (
     <Wrapper>
       <nav>
         <h2>
-          <span>TodoRack</span>
+          <span>Collab Tracker</span>
         </h2>
       </nav>
       <div className="container page">
         <div className="info">
           <h1>
-            <span>todo</span> app
+            <span>Collab</span> app
           </h1>
           <p>
             I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue

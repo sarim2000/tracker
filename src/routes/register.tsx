@@ -1,15 +1,14 @@
-import { FileRoute, Link } from "@tanstack/react-router";
+import {  Link, createFileRoute } from "@tanstack/react-router";
 import styled from "styled-components";
 import FormRow from "../components/formRow";
 
-type Props = {}
 
-export const Route = new FileRoute('/register').createRoute({
+export const Route = createFileRoute('/register')({
   component: Register,
 });
 
 
-function Register (props: Props) {
+function Register () {
   return (
     <Wrapper>
       <form className="form">

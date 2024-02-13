@@ -1,9 +1,10 @@
-import { NotFoundRoute, Router, RouterProvider } from "@tanstack/react-router";
+import { NotFoundRoute, Router, RouterProvider, createRouter } from "@tanstack/react-router";
 import ReactDOM from "react-dom/client";
 import NotFound from "./components/notfound";
 import './index.css';
 import { routeTree } from "./routeTree.gen";
 import { Route as rootRoute } from "./routes/__root";
+
 
 // Missing page route
 const notFoundRoute = new NotFoundRoute({
@@ -13,7 +14,7 @@ const notFoundRoute = new NotFoundRoute({
 
 
 // Set up a Router instance
-const router = new Router({
+const router = createRouter({
   routeTree,
   notFoundRoute,
   defaultPreload: "intent",
